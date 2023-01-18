@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animtion</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box
+    }
+
+    .main {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(3, 136, 193);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pendulum {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .pendulum #draw,
+    .images {
+        width: 300px;
+    }
+
+    #draw {}
+
+    .images {
+        top: -1px;
+    }
+
+    #image1 {
+        position: absolute;
+        left: 70px;
+        animation: zniaz ease-in-out infinite 2s;
+    }
+
+    @keyframes zniaz {
+        0% {
+            transform: translate(0px, 0px)
+        }
+        
+        50%{
+            transform: translate(3px, 0px)
+        }
+        
+        60%{
+            transform: translate(0px, 0px)
+        }
+    }
+
+    #image3 {
+        position: absolute;
+        left: -70px;
+        animation: ainz 2s ease-in-out infinite 2s;
+    }
+
+    @keyframes ainz {
+        0% {
+            transform: translate(0px, 0px)
+        }
+        
+        50%{
+            transform: translate(3px, 0px)
+        }
+        
+        60%{
+            transform: translate(0px, 0px)
+        }
+    }
+
+    #image4 {
+        position: absolute;
+        left: -138px;
+        animation: zain 4s ease-in-out infinite 2s;
+    }
+
+    @keyframes zain {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(25deg) translate(-65px, 10px);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    #image2 {
+        position: absolute;
+        left: 141px;
+        animation: niaz 4s ease-in-out infinite 4s;
+    }
+
+    @keyframes niaz {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+
+            transform: rotate(-25deg) translate(65px, 10px);
+        }
+
+        40% {
+            transform: rotate(-15deg) translate(32.5, 5px);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+</style>
+
+<body>
+    <div class="main">
+        <div class="pendulum">
+            <img id="draw" src="Draw_One_Clips-removebg-preview.png" alt="">
+            <img class="images" id="image1" src="images-removebg-preview (1).png" alt="">
+            <img class="images" id="image2" src="images-removebg-preview (1).png" alt="">
+            <img class="images" id="image3" src="images-removebg-preview (1).png" alt="">
+            <img class="images" id="image4" src="images-removebg-preview (1).png" alt="">
+        </div>
+        <center>
+            <h1>Pendulum</h1>
+        </center>
+    </div>
+
+</html>
+</body>
